@@ -21,7 +21,7 @@
     }
 
     .filter-item {
-      @apply flex w-full items-center justify-center rounded-md px-4 py-2 text-center text-sm font-medium text-slate-500;
+      @apply flex w-full items-center bg-gray-100 justify-center rounded-md px-4 py-2 text-center text-sm font-medium text-slate-500;
     }
 
     .filter-item-active {
