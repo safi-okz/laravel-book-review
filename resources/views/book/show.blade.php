@@ -18,13 +18,20 @@
   </div>
 
   <div>
+    <a href="{{ route('books.reviews.create', $book)}}">Add Review</a>
+  </div>
+
+  <div>
     <h2 class="mb-4 text-xl font-semibold">Reviews</h2>
     <ul>
       @forelse ($book->reviews as $review)
         <li class="book-item mb-4">
           <div>
             <div class="mb-2 flex items-center justify-between">
-              <div class="font-semibold">{{ $review->rating }}</div>
+              <div class="font-semibold">
+                {{-- {{ $review->rating }} --}}
+                <x-star-rating :rating="$review->rating" />
+            </div>
               <div class="book-review-count">
                 {{ $review->created_at->format('M j, Y') }}</div>
             </div>
